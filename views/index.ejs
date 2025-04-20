@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technix CRM</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <%- include('partials/header') %>
+
+    <!-- Banner Section -->
+    <section id="banner" class="section">
+        <div class="container">
+            <h1>The Foundation for Building and Retaining Customer Relationships</h1>
+            <p>Generate leads, Track prospects, Avail opportunities, Close deals and Retain clients with T-CRM.</p>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                <%= content.hero.heading %>
+            </h1>
+            <p>
+                <%= content.hero.subtext %>
+            </p>
+            <div class="cta-buttons">
+                <% content.hero.highlights.forEach(highlight => { %>
+                    <p>
+                        <%= highlight %>
+                    </p>
+                <% }); %>
+                <a href="/login" class="btn-primary">Login</a>
+                <a href="/book-demo" class="btn-secondary">Book a Demo</a>
+                <a href="/free-trial" class="btn-tertiary">Free Trial Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="overview">
+        <h2>Key Features</h2>
+        <div class="feature-cards">
+            <% content.features.forEach(feature => { %>
+                <div class="card">
+                    <img src="<%= feature.image %>" alt="<%= feature.title %>" />
+                    <h3><%= feature.title %></h3>
+                    <p><%= feature.description %></p>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+<section id="pricing" class="section">
+    <div class="container">
+        <h2>Pricing Plans</h2>
+        <p>Choose the plan that fits your business needs. Whether you're a small startup or a large enterprise, we have a package that works for you.</p>
+        <div class="pricing-cards">
+            <div class="card">
+                <h3>Basic Plan</h3>
+                <p>$29/month - Includes basic CRM features and up to 500 leads.</p>
+                <a href="/signup" class="btn-primary">Sign Up</a>
+            </div>
+            <div class="card">
+                <h3>Professional Plan</h3>
+                <p>$79/month - Includes advanced CRM features and unlimited leads.</p>
+                <a href="/signup" class="btn-primary">Sign Up</a>
+            </div>
+            <div class="card">
+                <h3>Enterprise Plan</h3>
+                <p>Custom pricing - Includes premium CRM features and priority support.</p>
+                <a href="/contact-us" class="btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Customer Support Section -->
+    <section id="customer-support" class="section">
+        <div class="container">
+            <h2>Customer Support</h2>
+            <p>Provide exceptional support to your customers by using our platform's advanced tools. Our CRM allows you to create and manage support tickets, automate responses, and deliver a seamless customer experience.</p>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/R.11fc0d9895bba1600a5b14be2e5d2e38?rik=agSp4CZzAB5W7g&pid=ImgRaw&r=0" />
+                    <h3>Ticket Management</h3>
+                    <p>Organize and track customer issues and resolutions in one place.</p>
+                </div>
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.BzRjs-s3l5TaYdpiFmVi5AHaFQ?w=236&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"/>
+                    <h3>Live Chat Integration</h3>
+                    <p>Integrate live chat to provide real-time support to customers.</p>
+                </div>
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.DvDdlTIjBF94m2JguBQgqQHaFj?w=185&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Self-Service Portal" />
+                    <h3>Self-Service Portal</h3>
+                    <p>Empower customers to solve problems on their own with a self-service portal.</p>
+                </div>
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.0gFsrlz6psEf8jZ0cS8oIAHaEV?w=273&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Helpdesk Automation" />
+                    <h3>Helpdesk Automation</h3>
+                    <p>Automate customer support processes to reduce response times and improve satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Analytics & Reporting Section -->
+<section id="analytics-reporting" class="section">
+    <div class="container">
+        <h2>Analytics & Reporting</h2>
+        <p>Gain valuable insights into your sales and customer data. Our CRM offers advanced analytics and reporting tools to help you measure success and identify opportunities for growth.</p>
+        <div class="cards">
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.vC_UwR1lGqjsGKUhCahptgHaEK?w=263&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" />
+                <h3>Sales Analytics</h3>
+                <p>Track sales trends and performance across various metrics.</p>
+            </div>
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.bBLU9E6POfxw5Xw40GySIQHaHY?rs=1&pid=ImgDetMain" alt="Customer Insights" />
+                <h3>Customer Insights</h3>
+                <p>Understand customer behavior and optimize strategies accordingly.</p>
+            </div>
+            <div class="card">
+                <img src="https://th.bing.com/th/id/R.94c62a504807f7e4d9c8e0228f0bb0eb?rik=byYp6v01h5crgg&pid=ImgRaw&r=0" alt="Real-Time Dashboards" />
+                <h3>Real-Time Dashboards</h3>
+                <p>Access live data visualizations to monitor your team's progress.</p>
+            </div>
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.xyekZ6_XtDqedLEqsf1OkAHaFj?rs=1&pid=ImgDetMain" alt="Custom Reports" />
+                <h3>Custom Reports</h3>
+                <p>Create customized reports to suit your business needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Integrations Section -->
+<section id="integrations" class="section">
+    <div class="container">
+        <h2>Seamless Integrations</h2>
+        <p>Our CRM seamlessly integrates with a wide variety of tools you already use, making it easier to manage customer relationships from one central location.</p>
+        <div class="cards">
+            <div class="card">
+                <img src="https://timesinternet.in/blog/wp-content/uploads/2023/12/Shutterstock_1814591309.jpg" />
+                <h3>Email Marketing</h3>
+                <p>Connect with popular email marketing platforms for better campaign management.</p>
+            </div>
+            <div class="card">
+                <img src="https://telecrm.in/assets/images/social-media-crm.jpg" />
+                <h3>Social Media Integration</h3>
+                <p>Integrate social media platforms to enhance customer engagement and support.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.findmycrm.com/hubfs/Imported_Blog_Media/Funnel-of-CRM-with-marketing-automation-2.jpg" />
+                <h3>Marketing Automation</h3>
+                <p>Automate marketing campaigns to generate leads and drive conversions.</p>
+            </div>
+            <div class="card">
+                <img src="https://valueadders.com.au/wp-content/uploads/2022/03/Best-Accounting-Software-Australia-1536x924.png" />
+                <h3>Accounting Software</h3>
+                <p>Link with accounting tools for easier invoicing and financial tracking.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Client Testimonials Section -->
+<section id="testimonials" class="section">
+    <div class="container">
+        <h2>What Our Clients Say</h2>
+        <p>Hear directly from our happy clients who have successfully transformed their business with our CRM platform.</p>
+        <div class="testimonial-cards">
+            <div class="card">
+                <p>"T-CRM helped us streamline our sales process, and the results speak for themselves! We've seen a 30% increase in conversions." - John D., CEO</p>
+            </div>
+            <div class="card">
+                <p>"With T-CRM's support tools, our customer service has never been better. We can track and resolve tickets faster than ever." - Sarah W., Support Manager</p>
+            </div>
+            <div class="card">
+                <p>"The integration with our marketing tools has made campaign management so much easier. The analytics help us make data-driven decisions." - Emily R., Marketing Director</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Target Users Section -->
+    <section class="target-users">
+        <h2>Designed for:</h2>
+        <ul>
+            <% content.targetUsers.forEach(user => { %>
+                <li>
+                    <%= user %>
+                </li>
+            <% }); %>
+        </ul>
+    </section>
+
+    <!-- Productivity Section -->
+    <section id="productivity" class="section">
+        <div class="container">
+            <h2>Increase Sales</h2>
+            <p>Bring in quality leads, nurture them, and turn them into happy, paying customers. Get a complete view of all customer data—personal details and communication. With the right offers made to the right customers at the optimal time, you can make better deals, resulting in improved ROI.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Targeting New Customers</h3>
+                </div>
+                <div class="card">
+                    <h3>Prioritize Your Leads Better</h3>
+                </div>
+                <div class="card">
+                    <h3>Centralize Sales Operations</h3>
+                </div>
+                <div class="card">
+                    <h3>Improve Sales Conversions</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maximize CLV Section -->
+    <section id="max-clv" class="section">
+        <div class="container">
+            <h2>Maximize Customer Lifetime Value (CLV)</h2>
+            <p>Maximizing customer lifetime value (CLV) is a continuous process that requires dedication and a focus on long-term customer relationships. By implementing effective strategies and utilizing data-driven insights, businesses can reap the rewards of a loyal and profitable customer base.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Offer a Referral Program</h3>
+                </div>
+                <div class="card">
+                    <h3>Targeted, Personalized Campaigns</h3>
+                </div>
+                <div class="card">
+                    <h3>Listen to Your Customers</h3>
+                </div>
+                <div class="card">
+                    <h3>Optimize Customer Service</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section id="collaboration" class="section">
+        <div class="container">
+            <h2>Streamline Processes</h2>
+            <p>From managing leads to simplifying and streamlining the sales pipeline, T-CRM platform allows you to automate repetitive tasks, eliminate manual work, and boost performance. It incorporates a variety of functions across sales, marketing, and service operations to help sales teams organize their work.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Automate Repetitive Tasks</h3>
+                </div>
+                <div class="card">
+                    <h3>Manage Sales Funnel</h3>
+                </div>
+                <div class="card">
+                    <h3>Generate Sales Leaderboards</h3>
+                </div>
+                <div class="card">
+                    <h3>Facilitated Marketing Campaigns</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Management Section -->
+    <section id="lead-management" class="section">
+        <div class="container">
+            <h2>Lead Management</h2>
+            <p>Capture, gather, and organize leads from multiple sources to enhance lead conversion. Identify and follow-up on Cross-Selling and Upselling opportunities for better customer success strategies.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Vet Leads</h3>
+                </div>
+                <div class="card">
+                    <h3>Qualification and Scoring</h3>
+                </div>
+                <div class="card">
+                    <h3>Reassign Dead Leads</h3>
+                </div>
+                <div class="card">
+                    <h3>Drip Email & SMS Campaigns</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get a Demo Section -->
+    <section id="get-demo" class="form-section">
+        <div class="container">
+            <h2>Get a Demo</h2>
+            <form action="/get-demo" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit">Request Demo</button>
+            </form>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (!name || !email) {
+                alert("Name and email are required!");
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+
+</body>
+
+</html>
