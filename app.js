@@ -77,6 +77,19 @@ ${message}
   }
 });
 
+app.get('/book-demo', (req, res) => {
+  res.render('book-demo'); // Make sure 'book-demo.ejs' exists in your views folder
+});
+
+app.post('/book-demo', (req, res) => {
+  const { name, email, company } = req.body;
+
+  // Handle form logic: save to DB, send email, etc.
+  console.log('Demo booked:', name, email, company);
+
+  res.send('Thanks for booking a demo! We’ll contact you soon.');
+});
+
 
 app.get('/login', (req, res) => {
   res.render('login');
