@@ -156,7 +156,7 @@ technix-crm/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/technix-crm-homepage.git
+git clone https://github.com/Dikshit-Yadav/Hackathon
 cd technix-crm-homepage
 
 # Install dependencies
